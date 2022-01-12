@@ -130,3 +130,46 @@ main > section {
 	margin-left: 5%;
 	background-color: #eee;
 }
+
+/* För info sektionen */
+#info_section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#info_section * {
+	text-align: center;
+}
+#info_section ul {
+	list-style-type: none; /* detta är för att ta bort prickarna som blir */
+	width: 100%;
+	height: auto;
+}
+#info_section ul > li {
+	width: 100%;
+	padding: 0.8rem;
+}
+/* ta bort tidigare inställningar på vår <a> tagg */
+#info_section a { 
+	color: black !important;
+	background: transparent !important;
+	opacity: 100% !important;
+}
+/* speciella inställningar för mail och telefon raden */
+#mail_li {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "mail dot phone";
+}
+#mail_a {
+	grid-area: mail;
+	text-align: right;
+}
+#dot_a {
+	grid-area: dot;
+}
+#phone_a {
+	grid-area: phone;
+	text-align: left;
+}
