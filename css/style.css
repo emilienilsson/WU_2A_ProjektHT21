@@ -21,11 +21,11 @@ a {
 	color: inherit;
 	text-decoration: none;
 	
-	background-color: #6a6a6a;
+	background-color: #ffffff;
 	padding: 1rem;
-	color: white;
+	color: black;
 	font-weight: 900;
-	opacity: 50%;
+	opacity: 96%;
 }
 
 /* För navigations fältet */
@@ -37,8 +37,9 @@ nav {
 	grid-template-areas: "menu text .";
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto;
-	background-color: #ccc;
+	background-color: #262525cc;
 	color: white;
+	z-index: 1;
 }
 nav img {
 	grid-area: menu;
@@ -50,8 +51,16 @@ nav span {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+	/* För att skuggan av titeln inte skall åka ner över sidans innehåll så använder jag overflow hidden */
+	overflow: hidden;
 }
-
+nav span > * {
+	text-transform: uppercase;
+	background-color: #ffffff30;
+	padding: 0.8rem;
+	box-shadow: 0px 0px 84px 164px #ffffff30;
+	overflow: hidden;
+}
 /* För vår main */
 main {
 	height: 100%;
@@ -75,10 +84,16 @@ main > section {
 	"."
 	"book"
 	"arrow";
+	background: url(../img/book.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 }
 #book_div {
 	text-align: center;
 	grid-area: book;
+}
+#book_div a {
+	background-color: #ffffffee;
 }
 #arrow_div {
 	text-align: center;
@@ -124,11 +139,13 @@ main > section {
 }
 #menu_span {
 	margin-right: 5%;
-	background-color: #eee;
+	background: url(../img/menu.jpg);
+	background-size: auto 100%;
+	
 }
 #wines_span {
 	margin-left: 5%;
-	background-color: #eee;
+	background: url(../img/wine.jpg);
 }
 
 /* För info sektionen */
@@ -148,6 +165,8 @@ main > section {
 #info_section ul > li {
 	width: 100%;
 	padding: 0.8rem;
+	padding-left: 0;
+	padding-right: 0;
 }
 /* ta bort tidigare inställningar på vår <a> tagg */
 #info_section a { 
