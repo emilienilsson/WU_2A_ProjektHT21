@@ -53,6 +53,7 @@ nav span {
 	align-items: center;
 	/* För att skuggan av titeln inte skall åka ner över sidans innehåll så använder jag overflow hidden */
 	overflow: hidden;
+	width: 50vw;
 }
 nav span > * {
 	text-transform: uppercase;
