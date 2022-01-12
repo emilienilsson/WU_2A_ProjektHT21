@@ -88,12 +88,13 @@ main > section {
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 }
-#main_section.menu {
+#main_section.menu, #main_section.book{
 	display: flex !important;
 	justify-content: center;
 	align-items: center;
 	overflow: scroll;
 }
+/* meny lista */
 #menu_list {
 	text-align: center;
 	padding: 3rem;
@@ -107,6 +108,57 @@ main > section {
 #menu_list li > * {
 	color: white;
 }
+/* Bokningsformulär */
+#book_span {
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	background-color: #000000aa;
+	padding: 3rem;
+}
+#book_form {
+	padding: 1rem;
+	border-radius: 0.3rem;
+	background-color: #000000aa;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}
+#book_form * {
+	display: block;
+	border-radius: 0.3rem;
+}
+#book_form span {
+	display: grid;
+	grid-template-areas: "date time";
+	grid-template-rows: auto;
+	grid-template-columns: 3fr 1fr;
+	min-width: 100%;
+	margin-bottom: 2rem;
+}
+#book_form label {
+	color: white;
+	margin-bottom: 0.5rem;
+}
+#book_form input[type="text"] {
+	margin-bottom: 2rem;
+	min-width: 100%;
+}
+#book_form textarea {
+	width: 100%;
+	resize: vertical;
+	margin-bottom: 1rem;
+}
+#book_form input[type="submit"] {
+	width: 100%;
+	padding: 0.3rem;
+	font-weight: 900;
+}
+
+/* index.html saker */
 #book_div {
 	text-align: center;
 	grid-area: book;
@@ -118,8 +170,7 @@ main > section {
 	text-align: center;
 	grid-area: arrow;
 }
-/* För vår pil som ska skrolla ner på sidan */
-#scroll_arrow {
+/* För vår pil som ska skrolla ner på sidan */ #scroll_arrow {
 	height: 10px;
 	width: 10px;
 	border: solid #c9c9c9;
