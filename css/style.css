@@ -73,7 +73,7 @@ main > section {
 /* Vår main sektion */
 #main_section {
 	height: 100%;
-	display: flex;
+
 	justify-content: center;
 	align-items: center;
 	
@@ -87,6 +87,25 @@ main > section {
 	background: url(../img/book.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% auto;
+}
+#main_section.menu {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	overflow: scroll;
+}
+#menu_list {
+	text-align: center;
+	padding: 3rem;
+	list-style-type: none;
+	background-color: #000000cc;
+	width: 80vw;
+}
+#menu_list li {
+	margin: 1rem;
+}
+#menu_list li > * {
+	color: white;
 }
 #book_div {
 	text-align: center;
@@ -173,6 +192,11 @@ main > section {
 	color: black !important;
 	background: transparent !important;
 	opacity: 100% !important;
+}
+/* Jag vill ändra enbart på info sektionen i meny htmlen */
+#info_section.menu {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 /* speciella inställningar för mail och telefon raden */
 #mail_li {
