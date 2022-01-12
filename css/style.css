@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* För navigations fältet */
+nav {
+	position: fixed;
+	display: grid;
+	width: 100vw;
+	grid-template-areas: "menu text .";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+nav img {
+	grid-area: menu;
+	height: 2rem;
+	margin: 0.7rem;
+}
+nav span {
+	grid-area: text;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
